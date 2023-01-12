@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
 }
 
 :root{
@@ -143,10 +145,15 @@ body{
     filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
 }
 
+/* pic at about section */
+.mypic img{
+    width: 45rem;
+}
+
 /* error msg */
 .errimg img{
     width: 60rem;
-    height: 30rem;
+    max-height: 30rem;
     border-radius: 20rem;
 }
 

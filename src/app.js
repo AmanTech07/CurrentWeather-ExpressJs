@@ -10,10 +10,12 @@ const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
 
+// setting paths
 app.set('view engine', 'hbs');
 app.set('views', template_path);
 hbs.registerPartials(partials_path);
 
+// giving path of static pages inside public folder
 app.use(express.static(static_path));
 
 // Routing

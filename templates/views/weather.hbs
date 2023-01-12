@@ -3,6 +3,7 @@
 
 <head>
     {{>header}}
+    <link rel="stylesheet" href="./css/weather.css">
 </head>
 
 <body>
@@ -15,18 +16,19 @@
             <div class="col-md-10 col-12 mx-auto">
                 <div class="main_content">
                     <form class="temp_form">
-                        <input type="text" id="cityName" placeholder="Ennter your city" autocomplete="off"> 
+                        <input type="text" id="location" placeholder="Enter your city" autocomplete="off"> 
                         <input type="submit" value="search" id="submitBtn">
                     </form>
                 </div>
                 <div class="tempInformation">
                     <div class="top_layer">
-                        <p id="day">Thrusday</p>
-                        <p id="today_date">13 JAN</p>
+                        <p id="today_date">Jan 13</p>
+                        <p id="day">Thr</p>
+                        <p id="timing">00:20 AM</p>
                     </div>
                     <div class="main_layer">
-                        <p id="city_name">Get Output Here</p>
-                        <div class="middle_layer data_hide">
+                        <p id="city_name">Get Output Here...</p>
+                        <div class="middle_layer data_hide" id="tempbox">
                             <p id="temp"><span>1</span><sup>o</sup>C</p>
                             <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
                         </div>
@@ -39,5 +41,7 @@
     <!-- footer -->
     {{>footer}}
     
+    <script src="js/script.js"></script>
+    <script src="js/currTime.js"></script>
 </body>
 </html>
