@@ -1,6 +1,6 @@
 :root{
-    --main-bg: #1e272e;
-    --main-color: #0097e6;
+    --main-bg: #000000;
+    --main-color: #bd3bde;
 }
 
 html{
@@ -38,7 +38,7 @@ html{
     right: 5px;
     bottom: 5px;
     border: none;
-    background: #009ad8;
+    background: #bd3bde;
     padding: 0 3rem;
     border-radius: 3rem;
     color: white;
@@ -46,7 +46,7 @@ html{
 }
 
 .temp_form input[type="submit"]:hover {
-    color: #009ad8;
+    color: #bd3bde;
     background-color: #ffff;
     cursor: pointer;
 }
@@ -100,13 +100,16 @@ html{
 }
 
 .main_layer .middle_layer p, 
-.main_layer .middle_layer .fa {
-    font-size: 7rem;
+.main_layer .middle_layer .col {
+    font-size: 6rem;
     font-weight: 900;
 }
 
-.fa {
-    color: #009ad8;
+.sun {
+    color: #ded51a;
+}
+.cloud, .rain, .fog {
+    color: #60b4e8;
 }
 
 sup {
@@ -123,9 +126,21 @@ sup {
     .temp_form{
         width: auto;
     }
-
+    
     .tempInformation {
         width: auto;
+    }
+
+    .main_layer .middle_layer p, 
+    .main_layer .middle_layer .fa {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .main_layer .middle_layer p, 
+    .main_layer .middle_layer .fa {
+        font-size: 3.5rem;
     }
 }
 

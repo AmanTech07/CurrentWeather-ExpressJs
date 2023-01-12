@@ -7,11 +7,11 @@ const data_hide = document.getElementById("tempbox");
 
 const changeStatus = (val) => {
     console.log(val);
-    if(val==="Clouds") temp_status.innerHTML = `<i class="fas fa-cloud"></i>`;
-    else if(val==="Sunny") temp_status.innerHTML = `<i class="fa-solid fa-sun"></i>`;
-    else if(val==="Rainy") temp_status.innerHTML = `<i class="fas fa-cloud-rain"></i>`;
-    else if(val==="Fog") temp_status.innerHTML = `<i class="fa-solid fa-smog"></i>`;
-    else temp_status.innerHTML = `<i class="fas fa-cloud-sun"></i>`;
+    if(val==="Clouds") temp_status.innerHTML = `<i class="fas fa-cloud col cloud"></i>`;
+    else if(val==="Sunny") temp_status.innerHTML = `<i class="fa-solid fa-sun col sun"></i>`;
+    else if(val==="Rainy") temp_status.innerHTML = `<i class="fas fa-cloud-rain col rain"></i>`;
+    else if(val==="Fog") temp_status.innerHTML = `<i class="fa-solid fa-smog col fog"></i>`;
+    else temp_status.innerHTML = `<i class="fas fa-cloud-sun col cloud"></i>`;
 }
 
 const changes = (data, city) => {
@@ -19,7 +19,7 @@ const changes = (data, city) => {
     let temperature = data.main.temp;
     let temperatureStatus = data.weather[0].main;
     city_name.innerHTML = `${city}, ${country}`;
-    temp.innerHTML = `<span>${temperature}</span><sup>o</sup>C`;
+    temp.innerHTML = `${temperature} °C`;
     changeStatus(temperatureStatus);
     data_hide.classList.remove('data_hide');
 }

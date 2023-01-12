@@ -2,9 +2,24 @@ const today_date = document.getElementById("today_date");
 const today_day = document.getElementById("day");
 const time = document.getElementById("timing");
 
+function mnth() {
+    return ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+}
+
+function day1() {
+    return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+}
+
 function updateTime(){
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thusday", "Friday", "Saturday"];
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thusday", "Friday", "Saturday"];
+
+    // ----------adding midea query through java script------------
+    if(window.matchMedia("(max-width: 350px)").matches){
+        months = mnth();
+        days = day1();
+    }
+    // ------------------------------------------------------------
     const today = new Date();
     let day = days[today.getDay()];
     let month = months[today.getMonth()];
@@ -30,4 +45,3 @@ function updateTime(){
 
 //for making our time is up to date everytime without refreshing the content
 window.setInterval("updateTime()", 1);  
-

@@ -7,8 +7,8 @@
 }
 
 :root{
-    --main-bg: #1e272e;
-    --main-color: #0097e6;
+    --main-bg: #000000;
+    --main-color: #bd3bde;
 }
 
 html{
@@ -54,7 +54,6 @@ body{
 
 .navbar-toggler{
     background-color: grey;
-    
 }
 
 /* snowflake left spinner */
@@ -112,10 +111,8 @@ body{
     color: var(--main-color);
 }
 
-
-
 .text_clr:hover{
-    text-shadow: 2px 2px 8px #8cceea;
+    text-shadow: 2px 2px 8px #c38cea;
 }
 
 .main_header_left button{
